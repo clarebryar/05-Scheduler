@@ -13,7 +13,7 @@ localStorage.setItem(task, hour);
 
   })
   
-  // function? How can DOM traversal be used to get thed o "hour-x" if the
+  // function? How can DOM traversal be used to get the "hour-x" if the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
@@ -28,4 +28,5 @@ localStorage.setItem(task, hour);
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
+  $('#currentDay').text(dayjs().format('dddd, MMM DD, YYYY hh:mm:ss'))
+}, 1000);
