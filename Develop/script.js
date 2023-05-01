@@ -6,12 +6,12 @@ $(document).ready(function () {
  // TODO: Add a listener for click events on the save button. This code should   
   $('.saveBtn').on('click', function() {
  // use the id in the containing time-block as a key to save the user input in    
-var hour- = $(this).siblings('.description').val();
+var task = $(this).siblings('.description').val();
 var hour = $(this).parent().attr('id');
   // local storage. HINT: What does `this` reference in the click listener
-localStorage.setItem(hour, hour-)
-console.log(hour-);
+localStorage.setItem(hour, task)
 console.log(hour);
+console.log(task);
   })
 
   
@@ -58,12 +58,14 @@ console.log(hour);
 $('#hour-9 .description').val(localStorage.getItem('hour-9'));
 $('#hour-10 .description').val(localStorage.getItem('hour-10'));
 $('#hour-11 .description').val(localStorage.getItem('hour-11'));
-$('#hour-12 .description').val(localStorage.getItem('hour-'));
-$('#hour-13 .description').val(localStorage.getItem('hour-'));
-$('#hour-14 .description').val(localStorage.getItem('hour-'));
-$('#hour-15 .description').val(localStorage.getItem('hour-'));
-$('#hour-16 .description').val(localStorage.getItem('hour-'));
-$('#hour-17 .description').val(localStorage.getItem('hour-'));
+$('#hour-12 .description').val(localStorage.getItem('hour-12'));
+$('#hour-13 .description').val(localStorage.getItem('hour-13'));
+$('#hour-14 .description').val(localStorage.getItem('hour-14'));
+$('#hour-15 .description').val(localStorage.getItem('hour-15'));
+$('#hour-16 .description').val(localStorage.getItem('hour-16'));
+$('#hour-17 .description').val(localStorage.getItem('hour-17'));
+$('#hour-18 .description').val(localStorage.getItem('hour-18'));
+
 
  // TODO: Add code to display the current date in the header of the page.
  $('#currentDay').text(dayjs().format('dddd, MMM DD, YYYY hh:mm:ss'), 1000);
